@@ -4,9 +4,14 @@
   align-items: center;
   padding: 20px;
   font-family: sans-serif;
-  background-color: #0d3451;
+  background-image: url("/public/assets/background.jpg"); /* remove /public from path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   height: 100vh;
 }
+
 
 header {
   display: flex;
@@ -20,11 +25,6 @@ header {
 .hello-welcome {
   font-size: 1.5em;
   font-weight: bold;
-}
-
-.social-icons {
-  font-size: 0.9em;
-  color: #cdcdcd;
 }
 
 .sliding-area-wrapper {
@@ -41,7 +41,7 @@ header {
   display: flex;
   transition: transform 0.3s ease-in-out; /* For smooth sliding animation (you might need more complex logic for true sliding) */
   width: fit-content; /* Adjust based on the number of sections */
-  background-color: #ffffff;
+  background-color: #070707aa;
 
 }
 
@@ -56,34 +56,15 @@ header {
 
 .section-navigation {
   display: flex;
-  gap: 10px;
+  gap: 50px;
 }
 
 .section-navigation button {
-  padding: 10px 15px;
-  border: 1px solid rgb(233, 233, 235);
-  border-radius: 5px;
-  background-color: rgb(8, 43, 92);
   cursor: pointer;
-  color: #ffffff;
 }
 
 .section-navigation button.active {
-  background-color: rgb(0, 5, 44);
   font-weight: bold;
   transition:  0.5s ;
 
-}
-
-/* Basic styling for About and Contact pages */
-.about-page h2,
-.contact-page h2 {
-  margin-top: 0;
-  color: #333;
-}
-
-.about-page p,
-.contact-page p {
-  line-height: 1.6;
-  color: #555;
 }
