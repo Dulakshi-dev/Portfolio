@@ -35,7 +35,7 @@ function App() {
     <div className="portfolio-container">
       <header>
       <div className="ml-80 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text">
-  Hello I'm Dulakshi Gammanpila.
+  Hello, I'm Dulakshi Gammanpila.
 </div>
       </header>
 
