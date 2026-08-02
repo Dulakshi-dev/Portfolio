@@ -28,8 +28,8 @@ import {
 function Skills() {
   return (
     <div className="about-page text-center">
-      <h2 class="text-3xl font-bold mb-6 text-gray-300">Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <h2 class="text-3xl font-bold mb-4 text-gray-300">Skills</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 gap-3">
 
         <div className="flex flex-col items-center text-center">
           <FaPython className="text-4xl text-yellow-400" />
@@ -151,7 +151,7 @@ function Skills() {
           <p className="text-gray-300 text-sm">Version control and CI/CD pipelines for automated deployment.</p>
         </div>
 
-        <div className="flex flex-col items-center text-center pb-4">
+        <div className="flex flex-col items-center text-center">
           <SiVercel className="text-4xl text-white" />
           <h3 className="text-l font-semibold text-gray-300">Vercel / Azure</h3>
           <p className="text-gray-300 text-sm">Deploying frontend and backend services to the cloud.</p>

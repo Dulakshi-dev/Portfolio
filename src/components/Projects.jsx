@@ -168,8 +168,8 @@ function Projects() {
               <div key={i} className="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-8 px-2">
                 <ProjectMedia media={project.media} />
 
-                <div className="md:w-1/2 text-gray-300">
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+<div className="md:w-[75%] text-gray-300">
+                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">

@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import backgroundImage from "./assets/background.jpg";
 
 function App() {
   const [activeSection, setActiveSection] = useState("section1");
@@ -32,15 +33,20 @@ function App() {
   };
 
   return (
-    <div className="portfolio-container">
+    <div
+      className="portfolio-container"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <header>
-<div className="ml-4 sm:ml-12 md:ml-24 lg:ml-72 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-2xl sm:text-3xl">          Hello, I'm Dulakshi Gammanpila.
+        <div className="ml-4 sm:ml-12 md:ml-24 lg:ml-72 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-2xl sm:text-2xl">
+          {" "}
+          Hello, I'm Dulakshi Gammanpila.
         </div>
       </header>
 
-<div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1600px] mx-auto h-full mb-5">
-    <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
-    <div className="sliding-area" ref={sliderRef}>
+<div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1300px] mx-auto mb-5 h-[560px]">
+  <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
+    <div className="sliding-area h-full overflow-y-auto" ref={sliderRef}>
       {activeSection === "section1" && <About />}
       {activeSection === "section2" && <Skills />}
       {activeSection === "section3" && <Projects />}

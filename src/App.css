@@ -4,13 +4,11 @@
   align-items: center;
   padding: 20px;
   font-family: sans-serif;
-  background-image: url("/public/assets/background.jpg"); /* remove /public from path */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
-  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 

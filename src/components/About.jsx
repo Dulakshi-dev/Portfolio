@@ -3,8 +3,8 @@ import React from "react";
 function About() {
   return (
     <div className="about-page text-center px-20">
-      <h2 class="text-3xl font-bold mb-8 text-gray-300">About Me</h2>
-      <p class="text-xl text-gray-300 mb-6 text-justify pt-10">
+      <h2 class="text-2xl font-bold mb-8 text-gray-300">About Me</h2>
+      <p class="text-md text-gray-300 mb-4 text-justify ">
         Hi, I'm Dulakshi Gammanpila, a final-year BComp (Hons) Computer Science
         undergraduate at the University of Sri Jayewardenepura, Sri Lanka. I'm
         passionate about building intelligent software that combines full-stack
@@ -13,7 +13,7 @@ function About() {
         applications through research, rapid prototyping, and thoughtful
         software engineering.
       </p>
-      <p class="text-xl text-gray-300 mb-6 text-justify">
+      <p class="text-md text-gray-300 mb-4 text-justify">
         My technical expertise spans Python, Java, JavaScript, TypeScript, and
         PHP, with experience building modern web applications using React,
         Next.js, Tailwind CSS, Spring Boot, Node.js, and FastAPI. I also work
@@ -23,7 +23,7 @@ function About() {
         language models. I have hands-on experience with MySQL, PostgreSQL,
         Supabase, ChromaDB, Docker, GitHub Actions, Azure, and Vercel.
       </p>
-      <p class="text-xl text-gray-300 mb-6 text-justify">
+      <p class="text-md text-gray-300 mb-4 text-justify">
         I enjoy working on projects that bridge research and real-world
         software. Some of my recent work includes NeuraScan, a brain tumor MRI
         classification system achieving approximately 94% test accuracy;
@@ -35,7 +35,7 @@ function About() {
         final-year research project on explainable, personalized nutrition
         recommendations using XGBoost and SHAP.
       </p>
-      <p class="text-xl text-gray-300 mb-1 text-justify pb-2">
+      <p class="text-md text-gray-300  text-justify pb-2">
         What excites me most is learning. Whether I'm exploring a new framework,
         reading machine learning research, or improving my system design skills,
         I'm always looking for opportunities to grow. I'm currently seeking
