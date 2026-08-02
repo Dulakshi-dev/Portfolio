@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="about-page text-center px-20">
-      <h2 class="text-2xl font-bold mb-8 text-gray-300">About Me</h2>
+      <h2 class="text-3xl font-bold mb-8 text-gray-300">About Me</h2>
       <p class="text-md text-gray-300 mb-4 text-justify ">
         Hi, I'm Dulakshi Gammanpila, a final-year BComp (Hons) Computer Science
         undergraduate at the University of Sri Jayewardenepura, Sri Lanka. I'm

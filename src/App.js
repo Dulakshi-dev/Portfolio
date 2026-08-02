@@ -7,11 +7,14 @@ import Skills from "./components/Skills";
 import backgroundImage from "./assets/background.jpg";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("section1");
+  const [activeSection, setActiveSection] = useState(
+    () => localStorage.getItem("activeSection") || "section1"
+  );
   const sliderRef = useRef(null);
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
+    localStorage.setItem("activeSection", section);
     if (sliderRef.current) {
       switch (section) {
         case "section1":
@@ -44,16 +47,16 @@ function App() {
         </div>
       </header>
 
-<div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1300px] mx-auto mb-5 h-[560px]">
-  <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
-    <div className="sliding-area h-full overflow-y-auto" ref={sliderRef}>
-      {activeSection === "section1" && <About />}
-      {activeSection === "section2" && <Skills />}
-      {activeSection === "section3" && <Projects />}
-      {activeSection === "section4" && <Contact />}
-    </div>
-  </div>
-</div>
+      <div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1300px] mx-auto mb-5 h-[560px]">
+        <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
+          <div className="sliding-area h-full overflow-y-auto" ref={sliderRef}>
+            {activeSection === "section1" && <About />}
+            {activeSection === "section2" && <Skills />}
+            {activeSection === "section3" && <Projects />}
+            {activeSection === "section4" && <Contact />}
+          </div>
+        </div>
+      </div>
 
       <nav className="section-navigation">
         <button
