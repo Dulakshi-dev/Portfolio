@@ -28,21 +28,15 @@ header {
 }
 
 .sliding-area-wrapper {
-  width: 100%;
-  max-width: 1000px; /* Match header width */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  margin-bottom: 20px;
-  border: 2px solid rgb(255, 255, 255); /* For visual representation of the sliding area */
-  border-radius: 10px;
+  overflow-x: auto;
+  height: 100%;
 }
 
 .sliding-area {
   padding: 10px;
-  display: flex;
-  transition: transform 0.3s ease-in-out; /* For smooth sliding animation (you might need more complex logic for true sliding) */
-  width: fit-content; /* Adjust based on the number of sections */
-  background-color: #070707aa;
-
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  background-color: #070707e3;
 }
 
 .section-content,
