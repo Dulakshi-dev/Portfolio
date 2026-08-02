@@ -34,8 +34,7 @@ function App() {
   return (
     <div className="portfolio-container">
       <header>
-        <div className="ml-72 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-3xl">
-          Hello, I'm Dulakshi Gammanpila.
+<div className="ml-4 sm:ml-12 md:ml-24 lg:ml-72 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-2xl sm:text-3xl">          Hello, I'm Dulakshi Gammanpila.
         </div>
       </header>
 
