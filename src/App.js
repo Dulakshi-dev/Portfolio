@@ -39,8 +39,8 @@ function App() {
         </div>
       </header>
 
-<div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1600px] h-full mb-5">
-  <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
+<div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1600px] mx-auto h-full mb-5">
+    <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
     <div className="sliding-area" ref={sliderRef}>
       {activeSection === "section1" && <About />}
       {activeSection === "section2" && <Skills />}
