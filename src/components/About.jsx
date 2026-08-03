@@ -48,11 +48,11 @@ function About() {
         I enjoy working on projects that bridge research and real-world
         software. Some of my recent work includes{" "}
         <span class="font-bold">NeuraScan</span>, a brain tumor MRI
-        classification system achieving approximately 94% test accuracy;
+        classification system achieving approximately 94% test accuracy.{" "}
         <span class="font-bold">MediScan</span>, an AI-powered medical report
-        analyzer using a RAG pipeline;
+        analyzer using a RAG pipeline.{" "}
         <span class="font-bold">ParkEase</span>, a microservices-based parking
-        reservation platform built with Spring Boot; and{" "}
+        reservation platform built with Spring Boot and{" "}
         <span class="font-bold">Shelf Loom</span>, a library management system
         where I led a six-member Agile development team. I'm also developing{" "}
         <span class="font-bold">VerdictAI</span>, a multilingual legal assistant
