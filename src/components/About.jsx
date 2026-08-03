@@ -5,35 +5,60 @@ function About() {
     <div className="about-page text-center px-20">
       <h2 class="text-3xl font-bold mb-8 text-gray-300">About Me</h2>
       <p class="text-md text-gray-300 mb-4 text-justify ">
-        Hi, I'm Dulakshi Gammanpila, a final-year BComp (Hons) Computer Science
-        undergraduate at the University of Sri Jayewardenepura, Sri Lanka. I'm
-        passionate about building intelligent software that combines full-stack
-        development, machine learning, and Artificial Intelligence to solve
-        real-world problems. I enjoy transforming ideas into practical, scalable
-        applications through research, rapid prototyping, and thoughtful
-        software engineering.
+        Hi, I'm <span class="font-bold">Dulakshi Gammanpila</span>, a final-year
+        BComp (Hons) <span class="font-bold">Computer Science</span>
+        undergraduate at the{" "}
+        <span class="font-bold">University of Sri Jayewardenepura</span>, Sri
+        Lanka. I'm passionate about building intelligent software that combines{" "}
+        <span class="font-bold">
+          full-stack development, machine learning, and Artificial Intelligence
+        </span>{" "}
+        to solve real-world problems. I enjoy transforming ideas into practical,
+        scalable applications through research, rapid prototyping, and
+        thoughtful software engineering.
       </p>
       <p class="text-md text-gray-300 mb-4 text-justify">
-        My technical expertise spans Python, Java, JavaScript, TypeScript, and
-        PHP, with experience building modern web applications using React,
-        Next.js, Tailwind CSS, Spring Boot, Node.js, and FastAPI. I also work
-        extensively with AI and machine learning using PyTorch, Hugging Face
-        Transformers, Scikit-learn, XGBoost, SHAP, and LangChain, alongside
-        Retrieval-Augmented Generation (RAG), vector databases, and large
-        language models. I have hands-on experience with MySQL, PostgreSQL,
-        Supabase, ChromaDB, Docker, GitHub Actions, Azure, and Vercel.
+        My technical expertise spans{" "}
+        <span class="font-bold">
+          Python, Java, JavaScript, TypeScript, and PHP
+        </span>
+        , with experience building modern web applications using{" "}
+        <span class="font-bold">
+          React, Next.js, Tailwind CSS, Spring Boot, Node.js, and FastAPI
+        </span>
+        . I also work extensively with{" "}
+        <span class="font-bold">AI and machine learning</span> using{" "}
+        <span class="font-bold">
+          PyTorch, Hugging Face Transformers, Scikit-learn, XGBoost, SHAP, and
+          LangChain
+        </span>
+        , alongside
+        <span class="font-bold">
+          Retrieval-Augmented Generation (RAG), vector databases, and large
+          language models
+        </span>
+        . I have hands-on experience with{" "}
+        <span class="font-bold">
+          MySQL, PostgreSQL, Supabase, ChromaDB, Docker, GitHub Actions, Azure,
+          and Vercel
+        </span>
+        .
       </p>
       <p class="text-md text-gray-300 mb-4 text-justify">
         I enjoy working on projects that bridge research and real-world
-        software. Some of my recent work includes NeuraScan, a brain tumor MRI
+        software. Some of my recent work includes{" "}
+        <span class="font-bold">NeuraScan</span>, a brain tumor MRI
         classification system achieving approximately 94% test accuracy;
-        MediScan, an AI-powered medical report analyzer using a RAG pipeline;
-        ParkEase, a microservices-based parking reservation platform built with
-        Spring Boot; and Shelf Loom, a library management system where I led a
-        six-member Agile development team. I'm also developing VerdictAI, a
-        multilingual legal assistant for Sri Lankan law, and NutriSL, my
+        <span class="font-bold">MediScan</span>, an AI-powered medical report
+        analyzer using a RAG pipeline;
+        <span class="font-bold">ParkEase</span>, a microservices-based parking
+        reservation platform built with Spring Boot; and{" "}
+        <span class="font-bold">Shelf Loom</span>, a library management system
+        where I led a six-member Agile development team. I'm also developing{" "}
+        <span class="font-bold">VerdictAI</span>, a multilingual legal assistant
+        for Sri Lankan law, and <span class="font-bold">NutriSL</span>, my
         final-year research project on explainable, personalized nutrition
-        recommendations using XGBoost and SHAP.
+        assessment and recommendations using XGBoost and SHAP.
       </p>
       <p class="text-md text-gray-300  text-justify pb-2">
         What excites me most is learning. Whether I'm exploring a new framework,
