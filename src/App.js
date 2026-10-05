@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -10,29 +10,10 @@ function App() {
   const [activeSection, setActiveSection] = useState(
     () => localStorage.getItem("activeSection") || "section1"
   );
-  const sliderRef = useRef(null);
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
     localStorage.setItem("activeSection", section);
-    if (sliderRef.current) {
-      switch (section) {
-        case "section1":
-          sliderRef.current.scrollLeft = 0;
-          break;
-        case "section2":
-          sliderRef.current.scrollLeft = sliderRef.current.offsetWidth;
-          break;
-        case "section3":
-          sliderRef.current.scrollLeft = sliderRef.current.offsetWidth * 2;
-          break;
-        case "section4":
-          sliderRef.current.scrollLeft = sliderRef.current.offsetWidth * 3;
-          break;
-        default:
-          break;
-      }
-    }
   };
 
   return (
@@ -41,15 +22,15 @@ function App() {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <header>
-        <div className="ml-4 sm:ml-12 md:ml-24 lg:ml-72 hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-2xl sm:text-2xl">
+        <div className="hello-welcome bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text text-xl sm:text-2xl md:text-3xl">
           {" "}
           Hello, I'm Dulakshi Gammanpila.
         </div>
       </header>
 
-      <div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1300px] mx-auto mb-5 h-[560px]">
+      <div className="p-[2px] rounded-[10px] bg-gradient-to-br from-pink-500 to-orange-400 w-full max-w-[1300px] mx-auto mb-4 h-[calc(100dvh-190px)] min-h-[460px] md:h-[560px]">
         <div className="sliding-area-wrapper w-full h-full overflow-x-auto rounded-[8px] bg-[#070707e3]">
-          <div className="sliding-area h-full overflow-y-auto" ref={sliderRef}>
+          <div className="sliding-area h-full overflow-y-auto">
             {activeSection === "section1" && <About />}
             {activeSection === "section2" && <Skills />}
             {activeSection === "section3" && <Projects />}
@@ -65,7 +46,7 @@ function App() {
           }`}
           onClick={() => handleSectionClick("section1")}
         >
-          <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+          <span className="relative px-3 sm:px-5 py-2 sm:py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
             About Me
           </span>
         </button>
@@ -76,7 +57,7 @@ function App() {
           }`}
           onClick={() => handleSectionClick("section2")}
         >
-          <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+          <span className="relative px-3 sm:px-5 py-2 sm:py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
             Skills
           </span>
         </button>
@@ -87,7 +68,7 @@ function App() {
           }`}
           onClick={() => handleSectionClick("section3")}
         >
-          <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+          <span className="relative px-3 sm:px-5 py-2 sm:py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
             Projects
           </span>
         </button>
@@ -98,7 +79,7 @@ function App() {
           }`}
           onClick={() => handleSectionClick("section4")}
         >
-          <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+          <span className="relative px-3 sm:px-5 py-2 sm:py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
             Contact
           </span>
         </button>

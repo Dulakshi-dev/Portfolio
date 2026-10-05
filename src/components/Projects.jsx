@@ -76,7 +76,7 @@ function ProjectMedia({ media }) {
   };
 
   return (
-    <div className="w-full md:w">
+    <div className="w-full md:w-1/2 flex-shrink-0">
       <div className="relative">
         {current.type === 'video' ? (
           <video
@@ -154,8 +154,8 @@ function Projects() {
   const goNext = () => setIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="px-6 py-5 max-w-8xl mx-auto text-center">
-      <h2 className="text-3xl font-bold text-gray-300 mb-6">Projects</h2>
+    <div className="px-2 sm:px-6 py-5 max-w-7xl mx-auto text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-300 mb-6">Projects</h2>
 
       <div className="relative">
         {/* Slider track */}
@@ -165,11 +165,11 @@ function Projects() {
             style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {projects.map((project, i) => (
-              <div key={i} className="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-8 px-2">
+              <div key={i} className="w-full flex-shrink-0 flex flex-col md:flex-row items-center gap-4 md:gap-8 px-2">
                 <ProjectMedia media={project.media} />
 
-<div className="md:w-[75%] text-gray-300">
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+<div className="w-full md:w-1/2 text-left text-gray-300">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -183,7 +183,7 @@ function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <a
                       href={project.github}
                       target="_blank"
@@ -213,31 +213,47 @@ function Projects() {
         <button
           onClick={goPrev}
           aria-label="Previous project"
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-full p-3 shadow-lg"
+          className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-full p-3 shadow-lg"
         >
           <FaChevronLeft />
         </button>
         <button
           onClick={goNext}
           aria-label="Next project"
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-full p-3 shadow-lg"
+          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-full p-3 shadow-lg"
         >
           <FaChevronRight />
         </button>
       </div>
 
-      {/* Dot indicators */}
-      <div className="flex justify-center gap-2 mt-6">
-        {projects.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to project ${i + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              i === index ? 'bg-gray-200' : 'bg-gray-600'
-            }`}
-          />
-        ))}
+      {/* Dot indicators + mobile arrows */}
+      <div className="flex items-center justify-center gap-4 mt-6">
+        <button
+          onClick={goPrev}
+          aria-label="Previous project"
+          className="md:hidden bg-gray-800 text-gray-200 rounded-full p-3"
+        >
+          <FaChevronLeft />
+        </button>
+        <div className="flex gap-2">
+          {projects.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to project ${i + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === index ? 'bg-gray-200' : 'bg-gray-600'
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={goNext}
+          aria-label="Next project"
+          className="md:hidden bg-gray-800 text-gray-200 rounded-full p-3"
+        >
+          <FaChevronRight />
+        </button>
       </div>
     </div>
   );

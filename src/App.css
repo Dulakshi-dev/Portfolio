@@ -2,54 +2,75 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 12px;
   font-family: sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
+/* background-attachment: fixed is unreliable on iOS/Android, so only use it on desktop */
+@media (min-width: 1024px) {
+  .portfolio-container {
+    padding: 20px;
+    background-attachment: fixed;
+  }
+}
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  max-width: 800px; /* Adjust as needed */
-  margin-bottom: 20px;
+  max-width: 1300px;
+  margin-bottom: 16px;
   color: #ffffff;
 }
 
 .hello-welcome {
-  font-size: 1.5em;
   font-weight: bold;
+  text-align: center;
 }
 
 .sliding-area-wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
   height: 100%;
 }
 
 .sliding-area {
   padding: 10px;
   height: 100%;
-  transition: transform 0.3s ease-in-out;
   background-color: #070707e3;
 }
 
 .section-content,
 .about-page,
 .contact-page {
-  flex-shrink: 0;
-  width: 100%; /* Each section takes full width of the container */
-  padding: 20px;
+  width: 100%;
+  padding: 12px;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .section-content,
+  .about-page,
+  .contact-page {
+    padding: 20px;
+  }
 }
 
 .section-navigation {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .section-navigation {
+    gap: 24px;
+  }
 }
 
 .section-navigation button {
@@ -58,6 +79,5 @@ header {
 
 .section-navigation button.active {
   font-weight: bold;
-  transition:  0.5s ;
-
+  transition: 0.5s;
 }

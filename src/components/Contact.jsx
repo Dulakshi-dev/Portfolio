@@ -10,10 +10,10 @@ import {
 
 const Contact = () => {
   return (
-    <div className="-to-b to-gray-100 px-6 py-5 text-gray-300">
+    <div className="px-2 sm:px-6 py-5 text-gray-300">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Contact Me</h2>
           <p className="text-lg text-gray-400 max-w-xl mx-auto ">
             Let's work together or just have a chat
           </p>
@@ -22,7 +22,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-10 space-y-10">
+        <div className="bg-gray-800/50 rounded-2xl shadow-lg p-4 sm:p-8 md:p-10 space-y-8 sm:space-y-10">
           {/* Contact details */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <a
@@ -30,7 +30,7 @@ const Contact = () => {
               className="flex flex-col items-center text-center gap-2 p-4 rounded-xl hover:bg-gray-700/50 transition duration-200"
             >
               <FaEnvelope className="text-4xl text-pink-400" />
-              <span className="text-lg break-all">dulakshigamma@gmail.com</span>
+              <span className="text-base sm:text-lg break-all">dulakshigamma@gmail.com</span>
             </a>
             
             <div className="flex flex-col items-center text-center gap-2 p-4 rounded-xl">
@@ -47,8 +47,8 @@ const Contact = () => {
           <div className="border-t border-gray-700" />
 
           {/* Social links + CV download */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
-            <div className="flex space-x-10 items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 items-center">
               <a
                 href="https://github.com/Dulakshi-dev"
                 target="_blank"
